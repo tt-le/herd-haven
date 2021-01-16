@@ -2,9 +2,9 @@ const theme = {
   palette: {
     primary: {
       light: "#eeeeee",
-      main: "#bdbdbd",
+      main: "#97b498",
       dark: "#004c40",
-      contrastText: "#bdbdbd",
+      contrastText: "#fff",
     },
     secondary: {
       light: "#484848",
