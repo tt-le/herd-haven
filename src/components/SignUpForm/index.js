@@ -1,19 +1,11 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import {
-  Button,
-  LinearProgress,
-  MenuItem,
-  Grid,
-  Box,
-  Link,
-} from "@material-ui/core";
-import { fieldToTextField, TextField } from "formik-material-ui";
+import { Button, MenuItem, Grid, Link } from "@material-ui/core";
+import { TextField } from "formik-material-ui";
 import { DatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import * as yup from "yup";
-import { isYesterday } from "date-fns";
 
 const initialValues = {
   firstName: "",
