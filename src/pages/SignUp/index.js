@@ -6,6 +6,7 @@ import {
   Paper,
   Typography,
   Grid,
+  Box,
 } from "@material-ui/core";
 
 import SignUpForm from "../../components/SignUpForm";
@@ -21,9 +22,16 @@ function SignUp() {
           style={{ height: "100%" }}
         >
           <Grid item>
-            <Typography variant="h6">Sign up</Typography>
-            <Paper elevation={1}>
-              <SignUpForm />
+            <Paper elevation={0} style={{ borderRadius: "15px" }}>
+              <Grid container justify="center">
+                <Box marginTop={3}>
+                  <Typography variant="h5">Sign up</Typography>
+                </Box>
+              </Grid>
+
+              <Box padding={4}>
+                <SignUpForm />
+              </Box>
             </Paper>
           </Grid>
         </Grid>
