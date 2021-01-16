@@ -22,17 +22,15 @@ function SignUp() {
           style={{ height: "100%" }}
         >
           <Grid item>
-            <Paper elevation={0} style={{ borderRadius: "15px" }}>
-              <Grid container justify="center">
-                <Box marginTop={3}>
-                  <Typography variant="h5">Sign up</Typography>
-                </Box>
-              </Grid>
-
-              <Box padding={4}>
-                <SignUpForm />
+            <Grid container justify="center">
+              <Box marginTop={3}>
+                <Typography variant="h5">Sign up</Typography>
               </Box>
-            </Paper>
+            </Grid>
+
+            <Box padding={4}>
+              <SignUpForm />
+            </Box>
           </Grid>
         </Grid>
       </CssBaseline>
