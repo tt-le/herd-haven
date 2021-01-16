@@ -22,16 +22,14 @@ function Login() {
           style={{ height: "100%" }}
         >
           <Grid item>
-            <Paper elevation={0} style={{ borderRadius: "15px" }}>
-              <Grid container justify="center">
-                <Box marginTop={3}>
-                  <Typography variant="h5">Log in</Typography>
-                </Box>
-              </Grid>
-              <Box padding={4}>
-                <LoginForm />
+            <Grid container justify="center">
+              <Box marginTop={3}>
+                <Typography variant="h5">Log in</Typography>
               </Box>
-            </Paper>
+            </Grid>
+            <Box padding={4}>
+              <LoginForm />
+            </Box>
           </Grid>
         </Grid>
       </CssBaseline>

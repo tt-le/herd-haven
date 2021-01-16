@@ -7,6 +7,7 @@ import themeObj from "./theme";
 
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
 const theme = createMuiTheme(themeObj);
 
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route path="/signup" exact render={SignUp} />
         <Route path="/login" exact render={Login} />
+        <Route path="/profile" exact render={Profile} />
       </Switch>
     </ThemeProvider>
   );
