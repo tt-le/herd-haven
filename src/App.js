@@ -8,6 +8,10 @@ import themeObj from "./theme";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
 const theme = createMuiTheme(themeObj);
 
 function App() {

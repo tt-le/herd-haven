@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 import { Formik, Form, Field } from "formik";
 import { Button, MenuItem, Grid, Link } from "@material-ui/core";
 import { TextField } from "formik-material-ui";
@@ -6,6 +7,8 @@ import { DatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import * as yup from "yup";
+
+import authDuck from '../../app/modular/auth';
 
 const initialValues = {
   firstName: "",
@@ -39,9 +42,16 @@ const validationSchema = yup.object().shape({
   country: yup.string().required("Required"),
 });
 
-function SignUpForm() {
+function SignUpForm({ signUp }) {
+  const onSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+      setSubmitting(false);
+      signUp(values);
+      // alert(JSON.stringify(values, null, 2));
+    }, 500);
+  }
   return (
-    <Formik initialValues={initialValues} validationSchema={validationSchema}>
+    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       {({ submitForm, isSubmitting, touched, errors }) => (
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <Form>
@@ -207,4 +217,8 @@ function SignUpForm() {
   );
 }
 
-export default SignUpForm;
+const mapDispatchToProps = {
+  signUp: authDuck.actions.signUp
+};
+
+export default connect(null, mapDispatchToProps)(SignUpForm);

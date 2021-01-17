@@ -1,5 +1,16 @@
-import { combineReducers } from "redux";
+import reducer from './reducer';
+import * as actions from './actions';
+// import * as selectors from './selectors';
+import * as types from './types';
+import { sagas } from './sagas';
 
-const reducer = combineReducers({});
+const duck = {
+  name: 'auth',
+  actions,
+  // selectors,
+  reducer,
+  sagas,
+  types,
+};
 
-export default reducer;
+export default duck;
