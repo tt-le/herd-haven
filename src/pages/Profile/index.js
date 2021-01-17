@@ -6,11 +6,11 @@ import Navigation from "../../components/Navigation";
 const testUser = {
   firstName: "Bryan",
   lastName: "Liu",
-  email: "liu.bryan@icloud.com",
-  birthDate: new Date("March 5, 2000"),
+  email: "bryan.liu@mail.utoronto.ca",
+  birthDate: new Date("January 1, 2000"),
   gender: "Male",
-  address: "71 Kirkland Place",
-  city: "Whitby",
+  address: "365 Yonge St",
+  city: "Toronto",
   country: "Canada",
 };
 

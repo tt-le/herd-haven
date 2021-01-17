@@ -10,6 +10,7 @@
 /build
 
 # misc
+README.md
 .eslintcache
 .DS_Store
 .env.local

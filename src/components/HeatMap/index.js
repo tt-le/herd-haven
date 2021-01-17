@@ -4,8 +4,12 @@ import GoogleMapReact from "google-map-react";
 
 function HeatMap() {
   const [heatmapPoints, setHeatMapPoints] = useState([
-    { lat: 59.95, lng: 30.33 },
-    { lat: 59.96, lng: 30.32 },
+    { lat: 43.658654, lng: -79.381864 },
+    { lat: 43.662373, lng: -79.383485 },
+    { lat: 43.663676, lng: -79.38012 },
+    { lat: 43.665407, lng: -79.377974 },
+    { lat: 43.667588, lng: -79.38056 },
+    { lat: 43.668962, lng: -79.384648 },
   ]);
   const apiKey = { key: "AIzaSyCzzH_05cKBIT1YNbtiuoe-k2w4U3BGG2M" };
   const heatMapData = {
@@ -30,8 +34,8 @@ function HeatMap() {
       <GoogleMapReact
         bootstrapURLKeys={apiKey}
         defaultCenter={{
-          lat: 59.95,
-          lng: 30.33,
+          lat: 43.66,
+          lng: -79.38,
         }}
         defaultZoom={11}
         heatmapLibrary={true}

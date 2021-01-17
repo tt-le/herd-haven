@@ -2,9 +2,9 @@ import React from "react";
 import { Grid, LinearProgress, Typography } from "@material-ui/core";
 
 const mapData = {
-  city: "Whitby",
-  vaccinated: "35556",
-  population: "135556",
+  city: "Toronto",
+  vaccinated: "1155562",
+  population: "2930000",
 };
 
 function MapFooter() {
