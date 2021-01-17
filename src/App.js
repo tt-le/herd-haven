@@ -8,6 +8,7 @@ import themeObj from "./theme";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Map from "./pages/Map";
 
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signup" exact render={SignUp} />
         <Route path="/login" exact render={Login} />
         <Route path="/profile" exact render={Profile} />
+        <Route path="/map" exact render={Map} />
       </Switch>
     </ThemeProvider>
   );
