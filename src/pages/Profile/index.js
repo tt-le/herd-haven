@@ -1,6 +1,7 @@
 import React from "react";
 import { CssBaseline, Container, Grid, Typography } from "@material-ui/core";
 import QRCode from "qrcode.react";
+import Navigation from "../../components/Navigation";
 
 const testUser = {
   firstName: "Bryan",
@@ -30,7 +31,10 @@ function Profile() {
           wrap="nowrap"
           style={{ height: "100%" }}
         >
-          <Grid item style={{ marginTop: "120px" }}>
+          <Grid item style={{ width: "100%" }}>
+            <Navigation />
+          </Grid>
+          <Grid item style={{ marginTop: "60px" }}>
             <QRCode value={testUser.email} size={200} />
           </Grid>
           <Grid item style={{ marginTop: "25px" }}>
