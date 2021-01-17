@@ -8,9 +8,9 @@ const theme = {
     },
     secondary: {
       light: "#484848",
-      main: "#bdbdbd",
-      dark: "#000000",
-      contrastText: "#fff",
+      main: "#fff",
+      dark: "#97b498",
+      contrastText: "#616161",
     },
   },
 };
