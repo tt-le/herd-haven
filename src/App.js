@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Map from "./pages/Map";
+import Camera from "./pages/CameraPage";
 
 const theme = createMuiTheme(themeObj);
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" exact render={Login} />
         <Route path="/profile" exact render={Profile} />
         <Route path="/" exact render={Map} />
+        <Route path="/cam" exact render={Camera} />
       </Switch>
     </ThemeProvider>
   );
