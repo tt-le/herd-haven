@@ -19,7 +19,7 @@ function App() {
         <Route path="/signup" exact render={SignUp} />
         <Route path="/login" exact render={Login} />
         <Route path="/profile" exact render={Profile} />
-        <Route path="/map" exact render={Map} />
+        <Route path="/" exact render={Map} />
       </Switch>
     </ThemeProvider>
   );
