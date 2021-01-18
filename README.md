@@ -4,7 +4,8 @@ Project for Hack the North 2020 ++
 
 A passport app to register and verify COVID-19 vaccinations which is then linked a heat map to evaluate safe cities with herd immunity.
 
-[Link to the project](https://www.herdhaven.online/)
+[Link to the project](https://www.herdhaven.online/)   
+Backend is still in progress but feel free to look at the front-end :)
 
 ## Front end screenshots
 
