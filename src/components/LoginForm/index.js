@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from 'react-redux';
 import { Formik, Form, Field } from "formik";
 import { Button, Grid, Link, Typography } from "@material-ui/core";
 import { TextField } from "formik-material-ui";
+import authDuck from '../../app/modular/auth';
 
 import * as yup from "yup";
 
@@ -15,9 +17,17 @@ const validationSchema = yup.object().shape({
   password: yup.string().required("Required"),
 });
 
-function LoginForm() {
+function LoginForm({ login }) {
+  const onSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+      setSubmitting(false);
+      login(values);
+      // alert(JSON.stringify(values, null, 2));
+    }, 500);
+  }
+
   return (
-    <Formik initialValues={initialValues} validationSchema={validationSchema}>
+    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       {({ submitForm, isSubmitting, touched, errors }) => (
         <Form>
           <Grid container direction="column" justify="space-evenly" spacing={2}>
@@ -73,4 +83,8 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+const mapDispatchToProps = {
+  login: authDuck.actions.login
+};
+
+export default connect(null, mapDispatchToProps)(LoginForm);
